@@ -4,7 +4,6 @@ import { HomePage } from "./pages/HomePage";
 import { PricingPage } from "./pages/PricingPage";
 import { ContactPage } from "./pages/ContactPage";
 import { DashboardPage } from "./pages/DashboardPage";
-import { ChatbotPage } from "./pages/ChatbotPage";
 import "./App.css";
 
 function App() {
@@ -18,9 +17,6 @@ function App() {
           <Route path="pricing" element={<PricingPage />} />
           <Route path="contact" element={<ContactPage />} />
         </Route>
-
-        {/* Chatbot route without layout (for iframe) */}
-        <Route path="/chatbot-ui" element={<ChatbotPage />} />
       </Routes>
     </BrowserRouter>
   );

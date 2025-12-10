@@ -79,19 +79,6 @@ export const MainLayout = () => {
           </div>
         </div>
       </footer>
-
-      {/* Embedded Chatbot Iframe */}
-      <iframe
-        src="/chatbot-ui"
-        title="Chatbot Assistant"
-        className="fixed bottom-0 right-0 border-0"
-        style={{
-          width: "450px",
-          height: "650px",
-          zIndex: 9999,
-          pointerEvents: "auto",
-        }}
-      />
     </div>
   );
 };

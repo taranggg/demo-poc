@@ -27,9 +27,11 @@ export const useWebsiteController = () => {
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent<PostMessageData>) => {
-      // In production, validate event.origin for security
-      // For this POC, we'll accept messages from same origin
-      if (event.origin !== window.location.origin) {
+      // Validate origin - accept messages from chat widget (localhost:3000) or same origin
+      const allowedOrigins = [window.location.origin, "http://localhost:3000"];
+
+      if (!allowedOrigins.includes(event.origin)) {
+        console.warn("Unauthorized message origin:", event.origin);
         return;
       }
 
